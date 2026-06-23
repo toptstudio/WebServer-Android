@@ -1,0 +1,29 @@
+<resources>
+    <item type="id" name="statusLabel" />
+    <item type="id" name="status" />
+    <item type="id" name="ipLabel" />
+    <item type="id" name="ipAddress" />
+    <item type="id" name="portLabelLayout" />
+    <item type="id" name="portLabel" />
+    <item type="id" name="portInputLayout" />
+    <item type="id" name="port" />
+    <item type="id" name="pathLabelLayout" />
+    <item type="id" name="pathLabel" />
+    <item type="id" name="pathRow" />
+    <item type="id" name="pathRowInner" />
+    <item type="id" name="path" />
+    <item type="id" name="changePathButton" />
+    <item type="id" name="buttonLayout" />
+    <item type="id" name="startStopButton" />
+    <item type="id" name="httpsCheckBox" />
+    <item type="id" name="highSpeedCheckBox" />
+    <item type="id" name="secureButton" />
+    <item type="id" name="findServersButton" />
+    <item type="id" name="grid_item_image" />
+    <item type="id" name="grid_item_label" />
+    <item type="id" name="pathTitle" />
+    <item type="id" name="listview" />
+    <item type="id" name="commandLayout" />
+    <item type="id" name="dialogButtonOK" />
+    <item type="id" name="dialogButtonStorage" />
+</resources>

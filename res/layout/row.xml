@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<LinearLayout android:background="@android:color/transparent"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingTop="6dp"
+              android:paddingBottom="6dp"
+              android:paddingStart="6dp"
+              android:paddingEnd="10dp"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <ImageView android:id="@id/grid_item_image"
+             android:background="@android:color/transparent"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:layout_gravity="center_vertical" />
+
+  <www.webserver.com.SingleLineTextView2
+      android:id="@id/grid_item_label"
+      android:textSize="15sp"
+      android:textColor="@color/text_primary"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="10dp"
+      android:layout_gravity="center_vertical"
+      android:ellipsize="end"
+      android:singleLine="true" />
+
+</LinearLayout>

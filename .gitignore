@@ -1,0 +1,8 @@
+android.jar
+r8.jar
+webserver_signing.keystore
+bin/
+gen/
+obj/
+compiled.zip
+.DS_Store

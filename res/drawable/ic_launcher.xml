@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Full blue background -->
+    <path
+        android:fillColor="#FF3F51B5"
+        android:pathData="M0,0h48v48H0z"/>
+
+    <!-- Logo placed within the 36×36dp safe zone, 6dp margin on all sides -->
+    <group
+        android:translateX="6"
+        android:translateY="6">
+
+        <!-- Bar 1 (top)  – 36×9 -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,0h36v9H0z"/>
+
+        <!-- Bar 2 (middle) – 36×9, 4.5dp gap -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,13.5h36v9H0z"/>
+
+        <!-- Bar 3 (bottom) – 36×9, 4.5dp gap -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,27h36v9H0z"/>
+    </group>
+</vector>

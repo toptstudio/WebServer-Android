@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!--
+         Total canvas 108×108dp.
+         Outer (bleed) gap from canvas edge to actual icon area = 0dp (the blue background fills canvas)
+         Actually the gaps are not applied to the foreground vector; the foreground is drawn on top.
+         So we just place the 36×36dp white logo at the center, leaving 36dp margins from canvas edge.
+         This corresponds to:
+           - 18dp outer gap (from canvas edge to safe‑zone edge)
+           - 18dp inner gap (from safe‑zone edge to logo edge)
+         Thus logo is 36dp, margins 36dp each side = 36+36+36 = 108.
+    -->
+    <group
+        android:translateX="36"
+        android:translateY="36">
+
+        <!-- Bar 1 (top)  – 36×9 -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,0h36v9H0z"/>
+
+        <!-- Bar 2 (middle) – 36×9, gap 4.5dp -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,13.5h36v9H0z"/>
+
+        <!-- Bar 3 (bottom) – 36×9, gap 4.5dp -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M0,27h36v9H0z"/>
+    </group>
+</vector>

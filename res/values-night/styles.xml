@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WhiteButton" parent="android:style/Widget.Material.Button">
+        <item name="android:backgroundTint">#FFFFFF</item>
+        <item name="android:textColor">@color/button_text_dark</item>
+    </style>
+    <style name="AppTheme" parent="android:Theme.Material">
+        <item name="android:colorPrimary">#FF363636</item>
+        <item name="android:buttonStyle">@style/WhiteButton</item>
+        <item name="android:windowBackground">@color/background</item>
+    </style>
+</resources>

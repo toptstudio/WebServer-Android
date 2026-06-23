@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<ScrollView android:background="@color/background"
+            android:fitsSystemWindows="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android">
+  <LinearLayout android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="20.0dp"
+                android:paddingTop="5.0dp"
+                android:paddingRight="20.0dp"
+                android:paddingBottom="10.0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+    <LinearLayout android:orientation="vertical"
+                  android:background="@drawable/rounded_corners"
+                  android:focusable="true"
+                  android:focusableInTouchMode="true"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="13.0dp"
+                  android:layout_marginBottom="10.0dp">
+      <LinearLayout android:orientation="vertical"
+                    android:background="@drawable/rounded_corners2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35.0dp"
+                    android:layout_marginBottom="10.0dp">
+        <TextView android:textSize="15.0sp"
+                  android:textColor="@color/header_text"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_marginLeft="10.0dp"
+                  android:layout_marginTop="5.0dp"
+                  android:text="@string/server_info_title" />
+      </LinearLayout>
+      <RelativeLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="10.0dp"
+                      android:layout_marginRight="10.0dp"
+                      android:layout_marginBottom="10.0dp">
+        <TextView android:textSize="15.0sp"
+                  android:textColor="@color/text_primary"
+                  android:gravity="center"
+                  android:id="@id/statusLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="30.0dp"
+                  android:text="@string/server_status_label"
+                  android:layout_alignParentLeft="true" />
+        <TextView android:textSize="15.0sp"
+                  android:textColor="@color/text_primary"
+                  android:id="@id/status"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/status_stopped"
+                  android:layout_toRightOf="@id/statusLabel"
+                  android:layout_alignBaseline="@id/statusLabel" />
+      </RelativeLayout>
+      <RelativeLayout android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="10.0dp"
+                      android:layout_marginRight="10.0dp"
+                      android:layout_marginBottom="12.0dp">
+        <TextView android:textSize="15.0sp"
+                  android:textColor="@color/text_primary"
+                  android:gravity="center"
+                  android:id="@id/ipLabel"
+                  android:layout_width="wrap_content"
+                  android:layout_height="30.0dp"
+                  android:text="@string/server_ip_label"
+                  android:layout_alignParentLeft="true" />
+        <TextView android:textSize="15.0sp"
+                  android:textColor="@color/text_primary"
+                  android:id="@id/ipAddress"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text=" 0.0.0.0"
+                  android:layout_toRightOf="@id/ipLabel"
+                  android:layout_alignBaseline="@id/ipLabel"
+                  android:maxLines="3" />
+      </RelativeLayout>
+      <LinearLayout android:id="@id/portLabelLayout"
+                    android:paddingBottom="10.0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dp"
+                    android:layout_marginRight="10.0dp">
+        <TextView android:textSize="15.0sp"
+                  android:textColor="@color/text_primary"
+                  android:id="@id/portLabel"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/server_port_label" />
+      </LinearLayout>
+      <LinearLayout android:id="@id/portInputLayout"
+                    android:paddingBottom="10.0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dp"
+                    android:layout_marginRight="10.0dp">
+        <EditText android:textSize="15.0sp"
+                  android:id="@id/port"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="9999"
+                  android:textColor="@color/text_primary"
+                  android:textColorHint="@color/text_secondary"
+                  android:lines="1"
+                  android:singleLine="true"
+                  android:inputType="number" />
+      </LinearLayout>
+      <LinearLayout android:id="@id/pathLabelLayout"
+                    android:paddingBottom="10.0dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dp"
+                    android:layout_marginRight="10.0dp">
+        <TextView android:textSize="15.0sp"
+                  android:textColor="@color/text_primary"
+                  android:id="@id/pathLabel"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/server_path_label" />
+      </LinearLayout>
+
+      <RelativeLayout android:id="@id/pathRow"
+                      android:paddingBottom="10.0dp"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="10.0dp"
+                      android:layout_marginBottom="5.0dp">
+        <LinearLayout android:orientation="horizontal"
+                      android:id="@id/pathRowInner"
+                      android:layout_width="fill_parent"
+                      android:layout_height="wrap_content">
+          <www.webserver.com.SingleLineTextView android:textSize="15.0sp"
+                                android:textColor="@color/text_primary"
+                                android:id="@id/path"
+                                android:layout_width="0.0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0" />
+          <Button android:textSize="15.0sp"
+                  android:id="@id/changePathButton"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginRight="10.0dp"
+                  android:layout_marginBottom="5.0dp"
+                  android:text="@string/change_path_button"
+                  android:onClick="myClickHandler" />
+        </LinearLayout>
+      </RelativeLayout>
+
+      <CheckBox android:id="@+id/hostHtmlCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="3.0dp"
+                android:text="Host HTML"
+                android:textSize="14.0sp"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/checkbox_tint" />
+
+      <CheckBox android:id="@+id/httpsCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="3.0dp"
+                android:text="Enable HTTPS"
+                android:textSize="14.0sp"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/checkbox_tint" />
+
+      <CheckBox android:id="@+id/highSpeedCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginTop="3.0dp"
+                android:text="High Speed Mode"
+                android:textSize="14.0sp"
+                android:textColor="@color/text_primary"
+                android:buttonTint="@color/checkbox_tint" />
+
+      <Button android:id="@+id/secureButton"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="SECURE"
+              android:onClick="onSecureClick"
+              android:layout_marginLeft="10.0dp"
+              android:layout_marginRight="10.0dp"
+              android:layout_marginTop="3.0dp"
+              android:layout_marginBottom="2.0dp"
+              android:textSize="15.0sp" />
+
+      <Button android:id="@+id/findServersButton"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Find Servers"
+              android:onClick="onFindServersClick"
+              android:layout_marginLeft="10.0dp"
+              android:layout_marginRight="10.0dp"
+              android:layout_marginTop="2.0dp"
+              android:layout_marginBottom="2.0dp"
+              android:textSize="15.0sp"
+              android:visibility="visible" />
+
+      <LinearLayout android:id="@id/buttonLayout"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+        <requestFocus />
+        <Button android:id="@id/startStopButton"    
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_server_button"
+                android:onClick="myClickHandler" 
+                android:layout_marginLeft="10.0dp"
+                android:layout_marginRight="10.0dp"
+                android:layout_marginTop="2.0dp"
+                android:layout_marginBottom="10.0dp"
+                android:textSize="15.0sp" />
+      </LinearLayout>
+
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>
