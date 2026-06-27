@@ -1,4 +1,5 @@
 remote_theme: jekyll/minima
+google_site_verification: ViTr8FLhE26he7eZkgC0wPBn3iAiixocOQ7C7f8VST4
 plugins:
   - jekyll-remote-theme
 
