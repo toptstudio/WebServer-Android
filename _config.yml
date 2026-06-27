@@ -1,10 +1,10 @@
 remote_theme: jekyll/minima
-google_site_verification: "7geSkQQo_VIzEcK6DrgLEspiW-E5GxAVPmYCRk-TrQ8"
-google_site_verification: ViTr8FLhE26he7eZkgC0wPBn3iAiixocOQ7C7f8VST4
-
 plugins:
   - jekyll-remote-theme
 
+# Google Search Console Verifications
+google_verification_primary: "7geSkQQo_VIzEcK6DrgLEspiW-E5GxAVPmYCRk-TrQ8"
+google_verification_secondary: "ViTr8FLhE26he7eZkgC0wPBn3iAiixocOQ7C7f8VST4"
+
 minima:
   skin: auto
-  
