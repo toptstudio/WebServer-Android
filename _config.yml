@@ -2,5 +2,7 @@ remote_theme: jekyll/minima
 plugins:
   - jekyll-remote-theme
 
+google_site_verification: "7geSkQQo_VIzEcK6DrgLEspiW-E5GxAVPmYCRk-TrQ8"
+
 minima:
   skin: auto
