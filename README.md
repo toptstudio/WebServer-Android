@@ -1,3 +1,5 @@
+<meta name="google-site-verification" content="ViTr8FLhE26he7eZkgC0wPBn3iAiixocOQ7C7f8VST4" />
+
 # 📱 WebServer-Android: The #1 Offline Web Server APK for Android (2026) – Zero‑Config Local File Sharing, 4K Media Streaming & Static Web Hosting (No Internet Required)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
