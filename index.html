@@ -6,10 +6,8 @@
 
     <!-- ────────────────────────────────────────────────
          WebServer-Android | Topt Studio
-         Mobile‑first, concise headers, all original quality
-         Google site verification added from _config.yml
-         Pill & button stacked vertically (never side‑by‑side)
-         Auto dark mode now built into CSS (no Jekyll needed)
+         Mobile‑first, PageSpeed & a11y optimized
+         All original quality + dark mode + shimmer
          ──────────────────────────────────────────────── -->
 
     <title>WebServer-Android – Free Offline Web Server APK by Toptstudio (0.5 MB)</title>
@@ -31,9 +29,9 @@
     <meta property="og:url" content="https://toptstudio.github.io/WebServer-Android/">
     <meta property="og:title" content="WebServer-Android – Free Offline Web Server APK by Toptstudio">
     <meta property="og:description" content="Turn any Android into a fully functional HTTP/HTTPS server. 0.5 MB, zero cloud, 4K streaming. Download now.">
-    <meta property="og:image" content="https://toptstudio.github.io/WebServer-Android/docs/screenshots/11_DW.jpg">
-    <meta property="og:image:width" content="600">
-    <meta property="og:image:height" content="400">
+    <meta property="og:image" content="https://toptstudio.github.io/WebServer-Android/docs/screenshots/11_DW.webp">
+    <meta property="og:image:width" content="1080">
+    <meta property="og:image:height" content="2408">
     <meta property="og:image:alt" content="WebServer-Android mixed theme main screen">
     <meta property="og:site_name" content="Topt Studio">
     <meta property="og:locale" content="en_US">
@@ -41,7 +39,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="WebServer-Android – Free Offline Web Server APK by Toptstudio">
     <meta name="twitter:description" content="Turn any Android phone into an offline HTTP/HTTPS server. 0.5 MB, 4K streaming, no cloud.">
-    <meta name="twitter:image" content="https://toptstudio.github.io/WebServer-Android/docs/screenshots/11_DW.jpg">
+    <meta name="twitter:image" content="https://toptstudio.github.io/WebServer-Android/docs/screenshots/11_DW.webp">
     <meta name="twitter:image:alt" content="WebServer-Android main screen">
 
     <script type="application/ld+json">
@@ -117,8 +115,8 @@
             --text-secondary: #475569;
             --text-tertiary: #64748b;
             --border: #e2e8f0;
-            --brand-blue: #0284c7;
-            --brand-blue-hover: #0369a1;
+            --brand-blue: #0369a1;   /* darkened for a11y contrast */
+            --brand-blue-hover: #0284c7;
             --brand-blue-soft: #f0f9ff;
             --purple-accent: #7c3aed;
             --success-badge: #dcfce7;
@@ -351,9 +349,16 @@
         }
         .screenshot-figure img {
             width: 100%;
+            height: auto;
             border-radius: var(--radius-md);
             border: 1px solid var(--border);
             box-shadow: var(--shadow-sm);
+        }
+
+        /* ── Generic image responsiveness ── */
+        img {
+            max-width: 100%;
+            height: auto;
         }
 
         .styled-list {
@@ -405,7 +410,8 @@
             .tagline { font-size: 0.9rem; }
             .features-grid { grid-template-columns: 1fr; }
             .btn-download { padding: 0.7rem 1.5rem; font-size: 0.95rem; }
-            .content-table { font-size: 0.8rem; }
+            .content-table { font-size: 0.8rem; min-width: auto; }
+            .content-table img { width: 100% !important; height: auto !important; }
             .guide-container { padding: 1.2rem; }
             .screenshot-figure { max-width: 100%; }
         }
@@ -455,7 +461,7 @@
 <body>
     <a href="#main-content" style="position:absolute;top:-100px;left:0;background:var(--brand-blue);color:#fff;padding:0.5rem 1rem;z-index:200;border-radius:0 0 var(--radius-md) 0;font-weight:700;text-decoration:none;">Skip to content</a>
 
-    <div class="wrapper" id="main-content">
+    <main class="wrapper" id="main-content">
         <header>
             <h1>WebServer<span>Android</span></h1>
             <p class="tagline">Turn any Android phone into a <strong>full HTTP/HTTPS server</strong>. Offline file sharing, 4K streaming, static hosting. <strong>0.5 MB, no cloud.</strong></p>
@@ -583,7 +589,7 @@
             <h2 id="sec-screenshots">Screenshot Gallery</h2>
             <div class="screenshot-row">
                 <figure class="screenshot-figure">
-                    <img src="docs/screenshots/11_DW.jpg" alt="Mixed theme main screen" loading="lazy">
+                    <img src="docs/screenshots/11_DW.webp" alt="Mixed theme main screen" loading="lazy" width="1080" height="2408">
                     <em style="display:block; margin-top:0.5rem; font-size:0.85rem; color:var(--text-tertiary);">Mixed theme main screen</em>
                 </figure>
             </div>
@@ -592,16 +598,16 @@
                 <table class="content-table">
                     <thead><tr><th>Dark Mode</th><th>Light Mode</th></tr></thead>
                     <tbody>
-                        <tr><td><img src="docs/screenshots/12_DD.jpg" width="240" alt="Dark file list" loading="lazy"></td><td><img src="docs/screenshots/13_WW.jpg" width="240" alt="Light root dir" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/14_DD.jpg" width="240" alt="Dark video streaming" loading="lazy"></td><td><img src="docs/screenshots/15_WW.jpg" width="240" alt="Light video streaming" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/16_DD.jpg" width="240" alt="Dark settings" loading="lazy"></td><td><img src="docs/screenshots/17_WW.jpg" width="240" alt="Light settings" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/18_DD.jpg" width="240" alt="Dark upload progress" loading="lazy"></td><td><img src="docs/screenshots/19_WW.jpg" width="240" alt="Light upload progress" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/20_DD.jpg" width="240" alt="Dark auth dialog" loading="lazy"></td><td><img src="docs/screenshots/21_WW.jpg" width="240" alt="Light auth dialog" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/22_DD.jpg" width="240" alt="Dark mDNS" loading="lazy"></td><td><img src="docs/screenshots/23_WW.jpg" width="240" alt="Light mDNS" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/24_DD.jpg" width="240" alt="Dark ZIP download" loading="lazy"></td><td><img src="docs/screenshots/25_WW.jpg" width="240" alt="Light ZIP download" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/26_DD.jpg" width="240" alt="Dark hotspot guide" loading="lazy"></td><td><img src="docs/screenshots/27_WW.jpg" width="240" alt="Light hotspot guide" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/28_DD.jpg" width="240" alt="Dark file actions" loading="lazy"></td><td><img src="docs/screenshots/29_WW.jpg" width="240" alt="Light file actions" loading="lazy"></td></tr>
-                        <tr><td><img src="docs/screenshots/30_DD.jpg" width="240" alt="Dark notification" loading="lazy"></td><td><img src="docs/screenshots/31_WW.jpg" width="240" alt="Light notification" loading="lazy"></td></tr>
+                        <tr><td><img src="docs/screenshots/12_DD.webp" alt="Dark file list" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/13_WW.webp" alt="Light root dir" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/14_DD.webp" alt="Dark video streaming" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/15_WW.webp" alt="Light video streaming" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/16_DD.webp" alt="Dark settings" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/17_WW.webp" alt="Light settings" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/18_DD.webp" alt="Dark upload progress" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/19_WW.webp" alt="Light upload progress" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/20_DD.webp" alt="Dark auth dialog" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/21_WW.webp" alt="Light auth dialog" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/22_DD.webp" alt="Dark mDNS" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/23_WW.webp" alt="Light mDNS" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/24_DD.webp" alt="Dark ZIP download" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/25_WW.webp" alt="Light ZIP download" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/26_DD.webp" alt="Dark hotspot guide" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/27_WW.webp" alt="Light hotspot guide" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/28_DD.webp" alt="Dark file actions" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/29_WW.webp" alt="Light file actions" loading="lazy" width="240" height="400"></td></tr>
+                        <tr><td><img src="docs/screenshots/30_DD.webp" alt="Dark notification" loading="lazy" width="240" height="400"></td><td><img src="docs/screenshots/31_WW.webp" alt="Light notification" loading="lazy" width="240" height="400"></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -725,7 +731,7 @@
                 <a href="mailto:toptstudio@gmail.com">Contact</a>
             </nav>
         </footer>
-    </div>
+    </main>
 
     <a href="#main-content" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
     <script>
