@@ -7,7 +7,7 @@
     <!-- ────────────────────────────────────────────────
          WebServer-Android | Topt Studio
          Mobile‑first, PageSpeed & a11y optimized
-         All original quality + dark mode + shimmer
+         Uncopyable text, bigger hero, Releases link fixed
          ──────────────────────────────────────────────── -->
 
     <title>WebServer-Android – Free Offline Web Server APK by Toptstudio (0.5 MB)</title>
@@ -115,7 +115,7 @@
             --text-secondary: #475569;
             --text-tertiary: #64748b;
             --border: #e2e8f0;
-            --brand-blue: #0369a1;   /* darkened for a11y contrast */
+            --brand-blue: #0369a1;
             --brand-blue-hover: #0284c7;
             --brand-blue-soft: #f0f9ff;
             --purple-accent: #7c3aed;
@@ -145,6 +145,14 @@
             -webkit-font-smoothing: antialiased;
             font-size: 1rem;
             min-height: 100vh;
+            /* Make all text uncopyable */
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        /* Allow selection on interactive elements so they still work normally */
+        a, button, input, textarea, select, code, pre, .btn-download, .back-to-top, .pill {
+            -webkit-user-select: auto;
+            user-select: auto;
         }
         :focus-visible { outline: 2.5px solid var(--brand-blue); outline-offset: 3px; }
         .wrapper { max-width: var(--max-width); margin: 0 auto; }
@@ -160,16 +168,16 @@
             background: var(--brand-blue-soft);
             border: 1px solid rgba(2, 132, 199, 0.2);
             color: var(--brand-blue);
-            padding: 0.35rem 1rem;
+            padding: 0.4rem 1.2rem;
             border-radius: var(--radius-pill);
-            font-size: 0.75rem;
+            font-size: 0.8rem;   /* slightly bigger */
             font-weight: 700;
             letter-spacing: 0.03em;
             text-transform: uppercase;
             white-space: nowrap;
         }
         h1 {
-            font-size: clamp(2rem, 8vw, 3.2rem);
+            font-size: clamp(2.2rem, 8vw, 3.6rem);  /* slightly bigger */
             font-weight: 800;
             letter-spacing: -0.03em;
             margin-bottom: 0.6rem;
@@ -179,8 +187,8 @@
         h1 span { color: var(--brand-blue); }
         .tagline {
             color: var(--text-secondary);
-            font-size: 1rem;
-            max-width: 600px;
+            font-size: 1.15rem;   /* slightly bigger */
+            max-width: 640px;
             margin: 0 auto 1.8rem;
             text-wrap: balance;
         }
@@ -193,10 +201,10 @@
             background: var(--brand-blue);
             color: #fff;
             font-weight: 700;
-            padding: 0.75rem 2rem;
+            padding: 0.8rem 2.2rem;
             border-radius: var(--radius-pill);
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.05rem;
             box-shadow: var(--shadow-brand);
             transition: all 0.2s ease;
             position: relative;
@@ -355,7 +363,6 @@
             box-shadow: var(--shadow-sm);
         }
 
-        /* ── Generic image responsiveness ── */
         img {
             max-width: 100%;
             height: auto;
@@ -407,7 +414,7 @@
         @media (max-width: 640px) {
             body { padding: 1rem 0.8rem 1.5rem; }
             h1 { font-size: 2rem; }
-            .tagline { font-size: 0.9rem; }
+            .tagline { font-size: 0.95rem; }
             .features-grid { grid-template-columns: 1fr; }
             .btn-download { padding: 0.7rem 1.5rem; font-size: 0.95rem; }
             .content-table { font-size: 0.8rem; min-width: auto; }
@@ -617,7 +624,7 @@
             <h2 id="sec-quickstart">Quick Start</h2>
             <div class="guide-container">
                 <ol>
-                    <li>Download the APK from <strong>Releases page</strong>.</li>
+                    <li>Download the APK from <strong><a href="https://github.com/toptstudio/WebServer-Android/releases" target="_blank" rel="noopener noreferrer" style="color:var(--brand-blue); font-weight:700;">Releases page</a></strong>.</li>
                     <li>Install &amp; grant storage/notification permissions.</li>
                     <li>Pick a folder to share (SAF or legacy).</li>
                     <li>Set port (default 9999) – root needed for 80/443.</li>
